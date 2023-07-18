@@ -1,0 +1,21 @@
+@use "sass:list";
+
+@mixin flex(
+  $justify-content: space-between,
+  $align-items: center,
+  $direction: row
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin color-scheme($bg, $text) {
+  @if list.length($bg) ==1 {
+    background-color: $bg;
+  } @else {
+    background-image: linear-gradient(to top left, $bg);
+  }
+  color: $text;
+}

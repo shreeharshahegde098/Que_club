@@ -1,0 +1,26 @@
+@use "../abstracts/mixins" as *;
+
+.card {
+  @include flex(space-between, center, column);
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  //   box-shadow: 0 0.25rem 1rem hsl(0 0% 100%/0.1);
+  margin: 0.5rem;
+  background-color: #0e1317;
+}
+
+.logo {
+  background-color: #f7bb26;
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.card__content {
+  text-align: center;
+}
+
+.card__title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}

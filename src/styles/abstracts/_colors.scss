@@ -1,0 +1,29 @@
+// $text: #ffffff;
+// $background: #0b090c;
+// $primary-button: #cccabd;
+// $secondary-button: #161217;
+// $accent: #bdccca;
+
+// dark-scheme
+
+$dark-text: #fbfaff;
+$dark-background: #050019;
+$dark-primary-button: #da2d01;
+$dark-secondary-button: #010005;
+$dark-accent: #017518;
+
+$dark-simple-gradient: $dark-primary-button, $dark-secondary-button;
+$dark-complex-gradient: $dark-primary-button, $dark-secondary-button,
+  $dark-accent;
+
+//light-scheme
+
+$light-text: #08252b;
+$light-background: #e1f5f9;
+$light-primary-button: #df53c6;
+$light-secondary-button: #eef9fc;
+$light-accent: #c6df53;
+
+$light-simple-gradient: $light-primary-button, $light-secondary-button;
+$light-complex-gradient: $light-primary-button, $light-secondary-button,
+  $light-accent;

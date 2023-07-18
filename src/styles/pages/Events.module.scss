@@ -1,0 +1,108 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+  @include flex(center, center, column);
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  min-height: 70vh;
+}
+
+.hero__content {
+  text-align: center;
+  padding: 1rem 2rem;
+
+  .hero__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0.25rem 1rem hsl(0 100% 100%/0.3);
+  }
+  .hero__description {
+    width: 60%;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 200;
+  }
+}
+
+.events__container {
+  padding: 0 2rem;
+}
+
+.upcomming__events,
+.past__events {
+  margin-block: 4rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.event {
+  @include flex(flex-start, flex-start);
+  gap: 2rem;
+  margin-block: 1.5rem;
+}
+
+.event__content {
+  flex: 0 1 70%;
+
+  .event__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    text-decoration: underline;
+  }
+
+  .event__body {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+}
+
+.event__imgWrap {
+  position: relative;
+  flex: 0 1 30%;
+}
+
+.event__img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/0.5;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .event__content {
+    flex: 0 1 60%;
+    .event__title {
+      font-size: 1.2rem;
+    }
+
+    .event__body {
+      font-size: 0.9rem;
+    }
+  }
+
+  .event__imgWrap {
+    flex: 0 1 40%;
+  }
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .event {
+    flex-direction: column;
+  }
+
+  .event__imgWrap,
+  .event__content {
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+  @include flex(center, center, column);
+  background-image: url("/member/pricing-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+}
+
+.hero__content {
+  text-align: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(0.2rem);
+
+  .hero__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0.25rem 1rem hsla(0, 0%, 15%, 0.685);
+  }
+  .hero__description {
+    width: 60%;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 600;
+  }
+}
+
+.members__section {
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  margin-block: 4rem;
+}
+
+.members__inner {
+  @include flex();
+  gap: 1rem;
+}
+
+.testimonial__section {
+  margin-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .hero__content {
+    .hero__title {
+      font-size: 2.5rem;
+    }
+
+    .hero__description {
+      font-size: 1rem;
+      width: 80%;
+    }
+  }
+
+  .members__inner {
+    flex-direction: column;
+  }
+}

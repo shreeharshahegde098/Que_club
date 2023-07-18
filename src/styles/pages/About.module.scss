@@ -1,0 +1,104 @@
+@use "../abstracts/mixins" as *;
+
+.hero {
+  @include flex(center, center, column);
+  background-image: url("/gallery/gallery-img12.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+}
+
+.hero__content {
+  text-align: center;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(0.2rem);
+
+  .hero__title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0.25rem 1rem hsla(0, 0%, 15%, 0.685);
+  }
+  .hero__description {
+    width: 60%;
+    margin-inline: auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 200;
+  }
+}
+
+.about__section {
+  @include flex();
+  gap: 1rem;
+  min-height: 100vh;
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+  margin: 2rem auto;
+}
+
+.about__content {
+  flex: 0 1 60%;
+}
+
+.title__small {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #f7bb26;
+  font-size: 1.2em;
+}
+
+.title__large {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 3.4rem;
+  width: 80%;
+}
+
+.about__description {
+  font-size: 1em;
+  line-height: 2.1em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about__ul {
+  margin-block: 2rem;
+}
+
+.about__imgWrap {
+  flex: 0 1 40%;
+  position: relative;
+  box-shadow: 0 0.25rem 1rem hsl(0 0% 100%/0.1);
+}
+
+.about__img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.testimonial__section {
+  margin-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .hero__content {
+    .hero__title {
+      font-size: 3rem;
+    }
+
+    .hero__description {
+      font-size: 1rem;
+      width: 80%;
+    }
+  }
+
+  .about__section {
+    flex-direction: column;
+  }
+}

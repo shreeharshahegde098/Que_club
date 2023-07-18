@@ -1,0 +1,83 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors";
+.footer {
+  background: linear-gradient(to right, #c6df53 0%, coral 100%);
+  color: colors.$dark-text;
+  padding: 6rem 1rem;
+  width: 100%;
+}
+
+.footer__inner {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 2.5rem;
+}
+
+.hero__quote {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0 0.45rem 1rem hsla(0, 0%, 76%, 0.562);
+  color: #da2d01;
+}
+
+.footer__navContainer {
+  @include flex(space-between, flex-start);
+  gap: 0.5rem;
+}
+
+.logo__container {
+  flex: 0 1 20%;
+
+  .logo {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo__quote {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+.nav {
+  flex: 0 1 60%;
+}
+
+.nav__ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  color: #fff;
+
+  .nav__link {
+    margin-bottom: 1rem;
+    font-size: 18px;
+  }
+}
+
+.social {
+  margin-block: 1rem;
+  @include flex(flex-start, center);
+  gap: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  .hero__quote {
+    font-size: 2rem;
+  }
+  .footer__navContainer {
+    flex-direction: column;
+
+    .nav,
+    .logo__container {
+      width: 100%;
+    }
+    .nav {
+      margin-block-start: 2rem;
+    }
+  }
+}

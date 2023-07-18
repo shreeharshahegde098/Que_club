@@ -1,0 +1,46 @@
+@use "./abstracts/mixins" as *;
+@use "./abstracts/colors";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include color-scheme(colors.$dark-background, colors.$dark-text);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.primary__button {
+  cursor: pointer;
+  padding: 1em 1.5em;
+  background-color: colors.$dark-primary-button;
+  color: colors.$dark-text;
+  border-radius: 6px;
+  transition: transform ease 0.2s, box-shadow ease 0.2s;
+  display: inline-block;
+  font-size: 18px;
+  z-index: 2;
+
+  &:hover {
+    transform: translate(0, -3px);
+    box-shadow: 0 20px 80px -10px colors.$dark-primary-button;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+}

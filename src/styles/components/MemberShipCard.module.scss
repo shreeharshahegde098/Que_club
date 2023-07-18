@@ -1,0 +1,63 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors";
+.card {
+  @include flex(space-between, center, column);
+  gap: 2em;
+  border-radius: 5px;
+  background-color: #181818a8;
+  width: 30%;
+}
+
+.card__head {
+  width: 100%;
+}
+
+.card__img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/0.5;
+  object-fit: cover;
+  border-radius: 0 0 5px 5px;
+}
+
+.head__title {
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+  background-color: colors.$dark-background;
+  color: colors.$dark-text;
+}
+
+.pricing {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.benifits__list {
+  padding: 1em 3em 3em 3em;
+  @include flex(space-between, center, column);
+}
+
+.promo,
+.list {
+  @include flex();
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.promo {
+  padding-top: 2em;
+}
+
+.promo__text {
+  color: #017518;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 90%;
+  }
+}
